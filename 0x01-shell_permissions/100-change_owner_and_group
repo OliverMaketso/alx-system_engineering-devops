@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown -r Vincent:stuff*
+find . -type f -exec chown vincent:staff {} +
