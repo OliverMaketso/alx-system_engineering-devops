@@ -1,0 +1,2 @@
+#!/bin/bash
+tr -cd 'a-z' <<< "$(echo {a..z}{a..z} | tr -d 'o' | tr -s ' ' '\n')"
