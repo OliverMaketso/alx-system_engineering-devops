@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -cd 'a-z' <<< "$(echo {a..z}{a..z} | tr -d 'o' | tr -s ' ' '\n')"
+paste -d'\n' <(echo {a..z} | tr ' ' '\n' | grep -v 'o') <(echo {a..z} | tr ' ' '\n' | grep -v 'o') | grep -v 'oo'
