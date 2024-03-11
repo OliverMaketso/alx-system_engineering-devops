@@ -1,0 +1,1 @@
+This folders contains all the taksks i did during 0x05-processes_and_signals software engineering track. Here i was tasked to learn everything on Linux processes and Signals, including Linux Process management
