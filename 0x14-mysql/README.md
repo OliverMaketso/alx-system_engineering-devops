@@ -1,0 +1,1 @@
+Install MySql 5.7 on both my servers
