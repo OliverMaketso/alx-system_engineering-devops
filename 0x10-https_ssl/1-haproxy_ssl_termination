@@ -47,5 +47,5 @@ frontend oliver-web-frontend-https
 
 backend oliver-web-backend
         balance roundrobin
-        server 238459-web-01 100.26.243.157:80 check
+        server 238459-web-01 52.205.83.252:80 check
         server 238459-web-02 54.174.86.201:80 check
