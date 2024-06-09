@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# script that run the command whoami  under the user passed as an argument
-sudo -u "$1" whoami
