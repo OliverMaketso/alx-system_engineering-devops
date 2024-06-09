@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# script that changes the user as nginx instead of root
+
+# kill another server process 
+# also because apache2 is using port 8080
+pkill -f apache2
+
+# change owner and group of ngninx configuraiton file
+chown nginx:nginx /etc/nginx/nginx.conf
+
+# give all permision for user of nginx config file
+chmod 700 /etc/nginx/nginx.conf
+
+# nginx must be listening on all active IPs on port 8080
+sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
+
+# restart nginx with the prev config
+sudo -u nginx service nginx start
