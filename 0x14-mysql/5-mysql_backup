@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#generates a MySQL dump and creates a compressed archive out of it.
+
+# Check if the passsword arg is provided
+if [ -z "$1" ]; then
+  echo "Usage: $0 <mysql_root_password>"
+  exit 1
+fi
+
+PASS=$1
+mysqldump -u root -p"$PASS" --all-databases > backup.sql
+CURRENT_DATE=$(date +%d-%m-%Y)
+FILE_NAME="$CURRENT_DATE.tar.gz"
+tar -czvf "$FILE_NAME" backup.sql
